@@ -1,0 +1,47 @@
+/*  поле дати */
+#datetime-picker {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/*  кнопка  */
+[data-start] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* таймер */
+[data-start]:hover {
+  background-color: #45a049;
+}
+
+[data-start]:focus {
+  outline: none;
+}
+
+.timer {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.field {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.label {
+  font-size: 12px;
+}
