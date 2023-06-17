@@ -8,16 +8,22 @@ const daysValue = document.querySelector('[data-days]');
 const hoursValue = document.querySelector('[data-hours]');
 const minutesValue = document.querySelector('[data-minutes]');
 const secondsValue = document.querySelector('[data-seconds]');
+let timerInterval = null;
+
+startButton.disabled = true;
 
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onClose(selectedDates) {
-    console.log(selectedDates[0]);
+  onClose(selectedDates, dateStr, instance) {
+    const selectedDate = selectedDates[0];
+    startButton.disabled = selectedDate <= new Date();
   },
 };
+
+console.log(startButton);
 
 function updateTimer() {
   const remainingTime = getRemainingTime();
